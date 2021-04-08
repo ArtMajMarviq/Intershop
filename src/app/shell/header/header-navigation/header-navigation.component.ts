@@ -13,6 +13,7 @@ export class HeaderNavigationComponent implements OnInit {
   @Input() view: 'auto' | 'small' | 'full' = 'auto';
 
   categories$: Observable<NavigationCategory[]>;
+  warehousesCatTitle$: Observable<string>;
 
   private openedCategories: string[] = [];
 
@@ -20,6 +21,8 @@ export class HeaderNavigationComponent implements OnInit {
 
   ngOnInit() {
     this.categories$ = this.shoppingFacade.navigationCategories$();
+    this.warehousesCatTitle$ = this.shoppingFacade.warehouseCategoryTitle$();
+    this.shoppingFacade.loadWarehouses$();
   }
 
   /**

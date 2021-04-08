@@ -16,4 +16,8 @@
     <!-- TODO: decide how to handle empty categories -->
     <h1>{{ category.name }}</h1>
   </ng-container>
+
+  <ng-container *ngIf="warehouseCatTitle$">
+    <h1>{{ warehouseCatTitle$ }}</h1>
+  </ng-container>
 </ng-container>

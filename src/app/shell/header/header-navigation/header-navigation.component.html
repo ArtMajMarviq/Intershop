@@ -31,4 +31,7 @@
       ></ish-sub-category-navigation>
     </ng-container>
   </li>
+  <li *ngIf="warehousesCatTitle$ | async" class="dropdown">
+    <a routerLink="/category-warehouses" [ngStyle]="{ width: '100%' }">{{ warehousesCatTitle$ | async }}</a>
+  </li>
 </ng-template>

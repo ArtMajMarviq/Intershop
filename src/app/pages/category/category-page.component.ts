@@ -14,11 +14,13 @@ import { DeviceType } from 'ish-core/models/viewtype/viewtype.types';
 export class CategoryPageComponent implements OnInit {
   category$: Observable<CategoryView>;
   deviceType$: Observable<DeviceType>;
+  warehouseCatTitle$: Observable<string>;
 
   constructor(private shoppingFacade: ShoppingFacade, private appFacade: AppFacade) {}
 
   ngOnInit() {
     this.category$ = this.shoppingFacade.selectedCategory$;
     this.deviceType$ = this.appFacade.deviceType$;
+    this.warehouseCatTitle$ = this.shoppingFacade.warehouseCategoryTitle$();
   }
 }

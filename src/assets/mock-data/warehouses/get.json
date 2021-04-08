@@ -1,0 +1,21 @@
+{
+  "title": "warehouses",
+  "description": "Our warehouses",
+  "data": [
+    { "country": "Germany", "city": "Jena", "number": 4957, "id": 1 },
+    { "country": "Australia", "city": "Melbourne", "number": 1515, "id": 2 },
+    {
+      "country": "United States",
+      "city": "San Francisco",
+      "number": 3127,
+      "id": 3
+    },
+    { "country": "United Kingdom", "city": "London", "number": 4463, "id": 4 },
+    { "country": "China", "city": "Shanghai", "number": 4304, "id": 5 },
+    { "country": "Japan", "city": "Tokio", "number": 3212, "id": 6 },
+    { "country": "India", "city": "New Dehli", "number": 991, "id": 7 },
+    { "country": "Mexico", "city": "Mexico City", "number": 796, "id": 8 },
+    { "country": "Brasil", "city": "Brasilia", "number": 3218, "id": 9 },
+    { "country": "Russia", "city": "Moscow", "number": 795, "id": 10 }
+  ]
+}

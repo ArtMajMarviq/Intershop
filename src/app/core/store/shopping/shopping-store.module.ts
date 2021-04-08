@@ -20,6 +20,8 @@ import { recentlyReducer } from './recently/recently.reducer';
 import { SearchEffects } from './search/search.effects';
 import { searchReducer } from './search/search.reducer';
 import { ShoppingState } from './shopping-store';
+import { WarehousesEffects } from './warehouses/warehouses.effects';
+import { warehousesReducer } from './warehouses/warehouses.reducer';
 
 const shoppingReducers: ActionReducerMap<ShoppingState> = {
   categories: categoriesReducer,
@@ -30,6 +32,7 @@ const shoppingReducers: ActionReducerMap<ShoppingState> = {
   filter: filterReducer,
   promotions: promotionsReducer,
   productListing: productListingReducer,
+  warehouses: warehousesReducer,
 };
 
 const shoppingEffects = [
@@ -41,6 +44,7 @@ const shoppingEffects = [
   FilterEffects,
   PromotionsEffects,
   ProductListingEffects,
+  WarehousesEffects,
 ];
 
 @NgModule({

@@ -45,6 +45,12 @@ import {
   getRecentlyViewedProducts,
 } from 'ish-core/store/shopping/recently';
 import { getSearchTerm, getSuggestSearchResults, suggestSearch } from 'ish-core/store/shopping/search';
+import { loadWarehouses } from 'ish-core/store/shopping/warehouses/warehouses.actions';
+import {
+  getWarehouses,
+  getWarehousesCategoryTitle,
+  getWarehousesDescription,
+} from 'ish-core/store/shopping/warehouses/warehouses.selectors';
 import { toObservable } from 'ish-core/utils/functions';
 import { whenFalsy, whenTruthy } from 'ish-core/utils/operators';
 
@@ -67,6 +73,24 @@ export class ShoppingFacade {
       this.store.dispatch(loadTopLevelCategories());
     }
     return this.store.pipe(select(getNavigationCategories(uniqueId)));
+  }
+
+  // WAREHOUSES
+
+  loadWarehouses$() {
+    this.store.dispatch(loadWarehouses());
+  }
+
+  warehouses$() {
+    return this.store.pipe(select(getWarehouses));
+  }
+
+  warehouseCategoryTitle$() {
+    return this.store.pipe(select(getWarehousesCategoryTitle));
+  }
+
+  warehouseDescription$() {
+    return this.store.pipe(select(getWarehousesDescription));
   }
 
   // PRODUCT

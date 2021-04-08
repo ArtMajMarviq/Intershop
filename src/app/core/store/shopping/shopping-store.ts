@@ -8,6 +8,7 @@ import { ProductsState } from './products/products.reducer';
 import { PromotionsState } from './promotions/promotions.reducer';
 import { RecentlyState } from './recently/recently.reducer';
 import { SearchState } from './search/search.reducer';
+import { WarehousesState } from './warehouses/warehouses.reducer';
 
 export interface ShoppingState {
   categories: CategoriesState;
@@ -18,6 +19,7 @@ export interface ShoppingState {
   filter: FilterState;
   promotions: PromotionsState;
   productListing: ProductListingState;
+  warehouses: WarehousesState;
 }
 
 export const getShoppingState = createFeatureSelector<ShoppingState>('shopping');

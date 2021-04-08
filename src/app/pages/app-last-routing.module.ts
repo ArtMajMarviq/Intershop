@@ -11,6 +11,11 @@ const routes: Routes = [
     loadChildren: () => import('./product/product-page.module').then(m => m.ProductPageModule),
   },
   {
+    path: 'category-warehouses',
+    loadChildren: () =>
+      import('./category/category-warehouses/category-warehouse.module').then(m => m.WarehousePageModule),
+  },
+  {
     matcher: matchCategoryRoute,
     loadChildren: () => import('./category/category-page.module').then(m => m.CategoryPageModule),
   },
